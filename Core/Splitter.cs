@@ -72,10 +72,10 @@ namespace Core
 
             foreach (var word in wordsSpleted)
             {
-                //int wordsLenght = rgs.IsMatch(word) ? _ShortUrlCharLength : word.Length;
+                int wordsLength = SentactewithUrl(word); ;
                 int centanceLenght = SentactewithUrl(sentence);
-                int wordsLenght = 0;
-                if (centanceLenght + wordsLenght + numberOfIcons + mentionListTostring.Length < wordSplitSize)
+               
+                if (centanceLenght + wordsLength + numberOfIcons + mentionListTostring.Length < wordSplitSize)
                 {
                     sentence += string.IsNullOrEmpty(sentence) ? word : " " + word;
                 }else{
